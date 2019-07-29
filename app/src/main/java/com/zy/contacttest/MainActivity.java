@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView3=findViewById(R.id.recyclerView3);
         LinearLayoutManager manager=new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
         mRecyclerView3.setLayoutManager(manager);
+        mRecyclerView3.setVisibility(View.GONE);
         initContactList();
         initContactRecyclerView();
         initLetterList();
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 if(mRecyclerView.getVisibility()== View.VISIBLE){
                     mRecyclerView.setVisibility(View.GONE);
                     mRecyclerView2.setVisibility(View.GONE);
+                    mRecyclerView3.setVisibility(View.VISIBLE);
                 }
                 String regx="[\\u0391-\\uFFE5]*";
                 String newTextRegx="[\\u0391-\\uFFE5]*";
